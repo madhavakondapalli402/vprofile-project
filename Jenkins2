@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    tools {
+        maven "MAVEN_HOME"
+        jdk "JAVA_HOME"
+    }
+    stages {
+        stage('Fetch code') {
+            steps {
+                git branch:'vp-rem',url:'https://github.com/hemasanku27/vprofile-project.git' 
+            }
+        }
+        stage('Build') {
+            steps{
+                sh 'mvn install'
+            }
+        }
+    }
+}
