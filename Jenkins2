@@ -14,7 +14,7 @@ pipeline {
         NEXUSIP = '10.0.2.179'
         NEXUSPORT = '8081'
         NEXUS-GRP-REPO = 'vprofile-maven-group'
-        NEXUSLOGIN = 'Nexus Cred'
+        NEXUS-LOGIN = 'Nexus Cred'
     }
 
     stages {
