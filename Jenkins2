@@ -29,5 +29,8 @@ pipeline {
                 }
             }
         }
+        steps('Test') {
+            sh 'mvn test'
+        }
     }
 }
