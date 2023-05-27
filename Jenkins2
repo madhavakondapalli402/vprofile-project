@@ -6,14 +6,14 @@ pipeline {
         jdk "JAVA_HOME"
     }
     environment {
-        SNAP_REPO = 'vprofile_snapshot'
+        SNAP_REPO = 'vprofile-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'ZAQ!zaq1'
-        RELEASE_REPO = 'vprofile_release'
-        CENTRAL_REPO = 'vpro_maven_central'
+        RELEASE_REPO = 'vprofile-release'
+        CENTRAL_REPO = 'vpro_maven-central'
         NEXUSIP = '10.0.2.179'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'vprofile_maven_group'
+        NEXUS_GRP_REPO = 'vprofile-maven-group'
         NEXUS_LOGIN = 'Nexus Cred'
     }
 
