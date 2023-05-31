@@ -19,12 +19,11 @@ pipeline {
             steps{
                 sh 'mvn test'
             }
-        }
-        post {
-            success {
-                echo "Now Archiving"
-                archiveArtifacts artifacts: '**/*.war'
-                
+            post {
+                success {
+                    echo "Now Archiving"
+                    archiveArtifacts artifacts: '**/*.war'
+                }
             }
         }
         stage('Slack Notification') {
