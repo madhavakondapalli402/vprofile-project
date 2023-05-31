@@ -27,5 +27,13 @@ pipeline {
                 
             }
         }
+        stage('Slack Notification') {
+            slackSend baseUrl: 'https://hooks.slack.com/services/', 
+            channel: '#jenkins-pipeline', 
+            color: 'good', 
+            message: 'This is testing slack notifications', 
+            teamDomain: 'Developing', 
+            tokenCredentialId: '56a050df-dfff-40c7-bbf7-27775b9facd4'
+           }
     }
 }
