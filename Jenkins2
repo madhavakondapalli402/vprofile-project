@@ -26,6 +26,13 @@ pipeline {
                 }
             }
         }
+        stage('SonarQube Analysis') {
+            steps {
+                withSonarQubeEnv('sonarserver') {
+                    sh "${MAVEN_HOME}/bin/mvn sonar:sonar"
+                }
+            }
+        }
         stage('Slack Notification') {
             steps {
                 slackSend baseUrl: 'https://hooks.slack.com/services/', 
